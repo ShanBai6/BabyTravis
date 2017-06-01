@@ -3,16 +3,8 @@
        <javac srcdir="." destdir="."/>
     </target>
 
-    <target name="jar">
-	<jar destfile="./test.jar" basedir=".">
-	    <manifest>
-		<attribute name="Main-Class" value="default.test"/>
-	    </manifest>
-	</jar>
-    </target>
-
     <target name="run">
-       <java jar="./test.jar" fork="true"/>
+       <java classname="test"/>
     </target>
 
 
