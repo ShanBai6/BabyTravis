@@ -1,4 +1,4 @@
-<project>
+<project basedir=".">
     <target name="clean">
         <delete dir="build"/>
     </target>
@@ -19,5 +19,9 @@
 
     <target name="run">
         <java jar="build/jar/HelloWorld.jar" fork="true"/>
+    </target>
+
+    <target name="test" depends="clean, compile, jar, run">
+        <description>Main target</description>
     </target>
 </project>
